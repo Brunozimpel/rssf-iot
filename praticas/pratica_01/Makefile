@@ -18,3 +18,4 @@ OBJCOPY = $(CC_PREFIX)arm-none-eabi-objcopy
 OBJDUMP = $(CC_PREFIX)arm-none-eabi-objdump
 NM      = $(CC_PREFIX)arm-none-eabi-nm
 SIZE    = $(CC_PREFIX)arm-none-eabi-size
+
