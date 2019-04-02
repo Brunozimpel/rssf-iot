@@ -9,11 +9,6 @@ AUTOSTART_PROCESSES(&hello_world_process);
 PROCESS_THREAD(hello_world_process, ev, data)
 {
   PROCESS_BEGIN();
-
-  /* Insira o codigo aqui */
-
-  
-  /************************/
-
+  printf("Hello World\n");
   PROCESS_END();
 }
