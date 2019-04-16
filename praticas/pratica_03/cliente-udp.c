@@ -1,20 +1,12 @@
-#include "contiki.h"
-#include "contiki-net.h"
-#include "net/ip/resolv.h"
-
+#include <contiki.h>
+#include <contiki-net.h>
+#include <net/ip/resolv.h>
 #include <stdio.h>
-
 #include "utils.h"
-
-
-
-
 
 static struct etimer et;
 static struct uip_udp_conn *client_conn;
 static uip_ipaddr_t ipaddr;
-
-
 
 
 /*---------------------------------------------------------------------------*/
@@ -47,7 +39,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
 
   // Configura nome local (mDNS).
   char contiki_hostname[16];
-  sprintf(contiki_hostname,"sensor %02X%02X",linkaddr_node_addr.u8[6], linkaddr_node_addr.u8[7]);
+  sprintf(contiki_hostname,"sensor%02X%02X",linkaddr_node_addr.u8[6], linkaddr_node_addr.u8[7]);
   resolv_set_hostname(contiki_hostname);
   printf("Configurando hostname para %s\r\n",contiki_hostname);
 
