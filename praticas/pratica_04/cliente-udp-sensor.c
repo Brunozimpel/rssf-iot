@@ -152,7 +152,15 @@ static void udp_handler(void)
 /*---------------------------------------------------------------------------*/
 static void send_led_cmd(int8_t cmd, int8_t led)
 {
-    /*** AQUI VOCÊ DEVE ENVIAR COMANDOS PARA OS LEDS DO SERVIDOR
+    leds_payload_t payload;
+
+    //payload.i8 = get_temp_average();
+    //printf("Vai enviar: %ld\n", payload.i32);
+
+    //if(uip_ds6_get_global(ADDR_PREFERRED) == NULL) {
+      //printf("Aguardando auto-configuracao de IP\n");
+      //return;
+    /***}    AQUI VOCÊ DEVE ENVIAR COMANDOS PARA OS LEDS DO SERVIDOR
      ***     - INSPIRI-SE NA FUNÇÃO send_packet ACIMA.
      ***     - VOCÊ DEVE UTILIZAR A ESTRUTURA DE MENSAGEM EM leds_payload_t
      ***     - OS COMANDOS DISPONÍVEIS SÃO (cmd):
